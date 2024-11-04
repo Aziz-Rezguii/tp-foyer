@@ -37,8 +37,5 @@ class EtudiantServiceImplTest {
         Mockito.when(er.findById(Mockito.anyLong())).thenReturn(Optional.of(etudiant));
         Etudiant etudiant1=es.retrieveEtudiant(0L);
         Assertions.assertNotNull(etudiant1);
-
-
     }
-
 }
