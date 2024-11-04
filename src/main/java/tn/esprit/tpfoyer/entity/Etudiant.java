@@ -1,7 +1,7 @@
 package tn.esprit.tpfoyer.entity;
 
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.;
+import lombok.;
 import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
@@ -11,8 +11,6 @@ import java.util.Set;
 @Getter
 @Setter
 @AllArgsConstructor
-
-
 @NoArgsConstructor
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -30,7 +28,11 @@ public class Etudiant {
     @ManyToMany(mappedBy = "etudiants")
     Set<Reservation> reservations;
 
+    // Constructeur personnalisé avec les principaux attributs
+    public Etudiant(String nomEtudiant, String prenomEtudiant, long cinEtudiant, Date dateNaissance) {
+        this.nomEtudiant = nomEtudiant;
+        this.prenomEtudiant = prenomEtudiant;
+        this.cinEtudiant = cinEtudiant;
+        this.dateNaissance = dateNaissance;
+    }
 }
-
-
-
